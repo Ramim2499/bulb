@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+    <style>
+        img{
+            height: 100px;
+            margin-left: 15px;
+        }
+        button{
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Bulb Switch</h2>
+    <img src="/off.png" alt="" id = "bulb">
+    <br>
+    <button id = "switch" onclick="changeBulb()">On</button>
+</body>
+<script>
+    var state = 0;
+    function changeBulb(){
+        if(state == 0){
+            document.getElementById("bulb").src = "on.png";
+            state = 1;
+            document.getElementById("switch").textContent = "off";
+        }
+        else{
+            document.getElementById("bulb").src = "off.png";
+            state = 0;
+            document.getElementById("switch").textContent = "on";
+        }
+    }
+</script>
+</html>
